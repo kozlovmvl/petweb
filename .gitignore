@@ -1,0 +1,4 @@
+__pycache__/
+*.py[oc]
+drfc/.venv
+drfc/static
