@@ -18,7 +18,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from drfc.swagger import schema_view
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/user/", include("user.urls"), name="user"),
+    path("api/swagger/", schema_view.with_ui("swagger", cache_timeout=0)),
 ]
